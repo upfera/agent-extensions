@@ -1,0 +1,1 @@
+{"mcpServers":{"azure-devops":{"type":"stdio","command":"npx","args":["-y","@azure-devops/mcp","SebaAG","--authentication","azcli"]}}}
