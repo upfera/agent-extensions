@@ -1,0 +1,49 @@
+{
+  "name": "agent-extensions",
+  "owner": {
+    "name": "Upfera"
+  },
+  "metadata": {
+    "description": "Reusable agent plugins for code intelligence, cloud platforms, DevOps, and developer productivity.",
+    "version": "1.0.0",
+    "homepage": "https://github.com/upfera/agent-extensions"
+  },
+  "plugins": [
+    {
+      "name": "codebase-memory",
+      "source": "./plugins/codebase-memory",
+      "description": "Codebase Memory knowledge graph, evidence-tiered investigation, and prompt routing.",
+      "version": "1.0.0",
+      "author": {"name": "Upfera"},
+      "category": "developer-tools",
+      "keywords": ["codebase-memory", "mcp", "code-intelligence"]
+    },
+    {
+      "name": "wsl-notifications",
+      "source": "./plugins/wsl-notifications",
+      "description": "Desktop notifications for agent lifecycle events on WSL.",
+      "version": "1.0.0",
+      "author": {"name": "Upfera"},
+      "category": "productivity",
+      "keywords": ["notifications", "windows", "wsl"]
+    },
+    {
+      "name": "azure",
+      "source": "./plugins/azure",
+      "description": "Azure MCP server configuration.",
+      "version": "1.0.0",
+      "author": {"name": "Upfera"},
+      "category": "developer-tools",
+      "keywords": ["azure", "mcp"]
+    },
+    {
+      "name": "azure-devops",
+      "source": "./plugins/azure-devops",
+      "description": "Azure DevOps MCP server and workflow skills.",
+      "version": "1.0.0",
+      "author": {"name": "Upfera"},
+      "category": "developer-tools",
+      "keywords": ["azure-devops", "mcp", "boards", "pipelines"]
+    }
+  ]
+}
