@@ -1,0 +1,1 @@
+{"$schema":"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json","name":"wsl-notifications","version":"1.0.0","description":"Desktop notifications for agent lifecycle events on WSL.","author":{"name":"Upfera"},"repository":"https://github.com/upfera/agent-extensions","license":"MIT","keywords":["notifications","windows","wsl","hooks"]}
