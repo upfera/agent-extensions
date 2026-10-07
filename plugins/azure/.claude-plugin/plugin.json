@@ -1,0 +1,1 @@
+{"$schema":"https://anthropic.com/claude-code/plugin.schema.json","name":"azure","version":"1.0.0","description":"Azure MCP server configuration for agent environments.","author":{"name":"Upfera","url":"https://github.com/upfera"},"repository":"https://github.com/upfera/agent-extensions","license":"MIT"}
