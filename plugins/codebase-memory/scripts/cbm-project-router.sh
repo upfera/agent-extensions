@@ -2,8 +2,6 @@
 set -u
 
 command -v jq >/dev/null 2>&1 || exit 0
-command -v codebase-memory-mcp >/dev/null 2>&1 || exit 0
-
 ROOT="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 CACHE_DIR="${CBM_CACHE_DIR:-${XDG_CACHE_HOME:-$HOME/.cache}/codebase-memory}"
 CACHE_FILE="${CBM_CACHE_FILE:-$CACHE_DIR/projects.json}"
