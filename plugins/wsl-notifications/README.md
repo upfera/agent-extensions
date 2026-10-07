@@ -9,7 +9,7 @@ Supported events:
 - SessionEnd
 
 Delivery order:
-1. JUNIE_NOTIFY_COMMAND is not used here; use AGENT_NOTIFY_COMMAND for an explicit command.
+1. Use AGENT_NOTIFY_COMMAND for an explicit notification command.
 2. Windows Toast through powershell.exe.
 3. notify-send.
 4. stdout fallback.
