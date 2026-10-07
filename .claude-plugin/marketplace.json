@@ -1,0 +1,67 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "agent-extensions",
+  "description": "Reusable agent plugins for code intelligence, cloud platforms, DevOps, and developer productivity.",
+  "owner": {
+    "name": "Upfera",
+    "url": "https://github.com/upfera"
+  },
+  "plugins": [
+    {
+      "name": "codebase-memory",
+      "source": "./plugins/codebase-memory",
+      "version": "1.0.0",
+      "description": "Codebase Memory knowledge graph, progressive-disclosure skill, evidence-tiered agents, and prompt routing.",
+      "author": {
+        "name": "Upfera",
+        "url": "https://github.com/upfera"
+      },
+      "homepage": "https://github.com/upfera/agent-extensions/tree/main/plugins/codebase-memory",
+      "repository": "https://github.com/upfera/agent-extensions",
+      "license": "MIT",
+      "keywords": ["codebase-memory", "mcp", "code-intelligence", "knowledge-graph"]
+    },
+    {
+      "name": "wsl-notifications",
+      "source": "./plugins/wsl-notifications",
+      "version": "1.0.0",
+      "description": "Desktop notifications for agent lifecycle events on WSL, with Windows Toast and notify-send fallbacks.",
+      "author": {
+        "name": "Upfera",
+        "url": "https://github.com/upfera"
+      },
+      "homepage": "https://github.com/upfera/agent-extensions/tree/main/plugins/wsl-notifications",
+      "repository": "https://github.com/upfera/agent-extensions",
+      "license": "MIT",
+      "keywords": ["notifications", "windows", "wsl", "hooks"]
+    },
+    {
+      "name": "azure",
+      "source": "./plugins/azure",
+      "version": "1.0.0",
+      "description": "Azure MCP server configuration for agent environments.",
+      "author": {
+        "name": "Upfera",
+        "url": "https://github.com/upfera"
+      },
+      "homepage": "https://github.com/upfera/agent-extensions/tree/main/plugins/azure",
+      "repository": "https://github.com/upfera/agent-extensions",
+      "license": "MIT",
+      "keywords": ["azure", "mcp", "cloud"]
+    },
+    {
+      "name": "azure-devops",
+      "source": "./plugins/azure-devops",
+      "version": "1.0.0",
+      "description": "Azure DevOps MCP server and workflow skills for Boards and Pipelines.",
+      "author": {
+        "name": "Upfera",
+        "url": "https://github.com/upfera"
+      },
+      "homepage": "https://github.com/upfera/agent-extensions/tree/main/plugins/azure-devops",
+      "repository": "https://github.com/upfera/agent-extensions",
+      "license": "MIT",
+      "keywords": ["azure-devops", "mcp", "boards", "pipelines"]
+    }
+  ]
+}
