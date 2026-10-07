@@ -1,0 +1,1 @@
+{"$schema":"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json","name":"azure-devops","version":"1.0.0","description":"Azure DevOps MCP server and workflow skills for Boards and Pipelines.","author":{"name":"Upfera"},"repository":"https://github.com/upfera/agent-extensions","license":"MIT","keywords":["azure-devops","mcp","boards","pipelines"]}
