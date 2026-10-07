@@ -1,0 +1,1 @@
+{"mcpServers":{"azure-mcp-server":{"type":"stdio","command":"npx","args":["-y","@azure/mcp@latest","server","start"],"disabled":true}}}
