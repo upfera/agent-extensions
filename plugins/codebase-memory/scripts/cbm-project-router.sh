@@ -11,24 +11,24 @@ BIN="${CBM_BIN:-codebase-memory-mcp}"
 mkdir -p "$CACHE_DIR" 2>/dev/null || exit 0
 
 mtime=0
-[ -f "$CACHE_FILE" ] && mtime="$(stat -c %Y "$CACHE_FILE" 2>/dev/null || echo 0)"
+[[ -f "$CACHE_FILE" ]] && mtime="$(stat -c %Y "$CACHE_FILE" 2>/dev/null || echo 0)"
 now="$(date +%s)"
 age=$((now - mtime))
 
-if [ ! -s "$CACHE_FILE" ] || [ "$mtime" -le 0 ] || [ "$age" -lt 0 ] || [ "$age" -ge "$TTL" ]; then
+if [[ ! -s "$CACHE_FILE" || "$mtime" -le 0 || "$age" -lt 0 || "$age" -ge "$TTL" ]]; then
   tmp="$CACHE_FILE.tmp.$$"
   raw="$("$BIN" cli list_projects --offset 0 --limit 100 2>/dev/null)" || raw=""
-  if [ -n "$raw" ]; then
+  if [[ -n "$raw" ]]; then
     printf '%s' "$raw" |
       jq -c '{projects: [(.projects[]? | if type == "object" then .name else . end)]}' > "$tmp" 2>/dev/null &&
       mv -f "$tmp" "$CACHE_FILE" 2>/dev/null || rm -f "$tmp" 2>/dev/null
   fi
 fi
 
-[ -s "$CACHE_FILE" ] || exit 0
+[[ -s "$CACHE_FILE" ]] || exit 0
 
 prompt="$(cat 2>/dev/null | jq -r '.prompt // empty' 2>/dev/null || true)"
-[ -n "$prompt" ] || exit 0
+[[ -n "$prompt" ]] || exit 0
 
 matches="$(
   printf '%s\n' "$prompt" |
@@ -41,7 +41,7 @@ matches="$(
     paste -sd ', ' -
 )"
 
-[ -n "$matches" ] || exit 0
+[[ -n "$matches" ]] || exit 0
 
 context="Codebase Memory confirmed indexed project(s) mentioned in the prompt: $matches. Use the confirmed project name(s) directly. Verify structural claims with graph tools and use source fallback when coverage is incomplete."
 

@@ -32,7 +32,7 @@ done
 bash -n "$root/plugins/codebase-memory/scripts/cbm-project-router.sh"
 bash -n "$root/plugins/wsl-notifications/scripts/notify-send.sh"
 
-"$root/plugins/codebase-memory/tests/test-router.sh"
-"$root/plugins/wsl-notifications/tests/test.sh"
+bash "$root/plugins/codebase-memory/tests/test-router.sh"
+bash "$root/plugins/wsl-notifications/tests/test.sh"
 
 echo "agent-extensions validation passed"
