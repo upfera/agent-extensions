@@ -2,15 +2,15 @@
 set -u
 
 INPUT=""
-while [ "$#" -gt 0 ]; do
+while [[ "$#" -gt 0 ]]; do
   case "$1" in
     -|test) ;;
-    *) [ -n "$INPUT" ] || INPUT="$1" ;;
+    *) [[ -n "$INPUT" ]] || INPUT="$1" ;;
   esac
   shift
 done
 
-[ -n "$INPUT" ] || INPUT="$(cat 2>/dev/null || true)"
+[[ -n "$INPUT" ]] || INPUT="$(cat 2>/dev/null || true)"
 
 event="$(printf '%s' "$INPUT" | python3 -c 'import json,sys; d=json.load(sys.stdin); print(d.get("hook_event_name","Agent"))' 2>/dev/null || true)"
 message="$(printf '%s' "$INPUT" | python3 -c 'import json,sys; d=json.load(sys.stdin); print((d.get("last_assistant_message") or d.get("reason") or d.get("prompt") or d.get("tool_name") or "Agent activity").replace("\n"," ")[:240])' 2>/dev/null || true)"
@@ -19,7 +19,7 @@ event="${event:-Agent}"
 message="${message:-Agent activity}"
 title="Agent - $event"
 
-if [ -n "${AGENT_NOTIFY_COMMAND:-}" ]; then
+if [[ -n "${AGENT_NOTIFY_COMMAND:-}" ]]; then
   "$AGENT_NOTIFY_COMMAND" "$title" "$message"
   exit 0
 fi
